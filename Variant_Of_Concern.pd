@@ -1,0 +1,182 @@
+#N canvas 119 77 1007 733 10;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array S1_VARIANT_OF_CONCERN 1270 float 0;
+#X coords 0 30 1269 -10 400 140 1;
+#X restore 450 -34 graph;
+#X obj 745 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 805 242 loadbang;
+#X obj 731 299 tabread;
+#X obj 743 203 counter;
+#X obj 742 225 t f f;
+#X floatatom 735 258 5 0 0 0 - - -;
+#X floatatom 731 322 5 0 0 0 - - -;
+#N canvas 429 150 784 478 Proteodic_Process 0;
+#X obj 88 23 inlet;
+#X obj 58 54 route 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+20;
+#X msg 20 90 220;
+#X msg 97 90 311.1;
+#X msg 142 90 349.2;
+#X msg 186 90 392;
+#X msg 220 91 440;
+#X msg 256 91 466.2;
+#X msg 301 91 493.9;
+#X msg 346 91 523.3;
+#X msg 389 91 587.3;
+#X msg 52 90 261.6;
+#X msg 435 91 0;
+#X obj 205 349 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 11 0;
+#X connect 1 2 3 0;
+#X connect 1 3 4 0;
+#X connect 1 4 4 0;
+#X connect 1 5 4 0;
+#X connect 1 6 4 0;
+#X connect 1 7 5 0;
+#X connect 1 8 5 0;
+#X connect 1 9 5 0;
+#X connect 1 10 5 0;
+#X connect 1 11 6 0;
+#X connect 1 12 6 0;
+#X connect 1 13 6 0;
+#X connect 1 14 6 0;
+#X connect 1 15 7 0;
+#X connect 1 16 8 0;
+#X connect 1 17 9 0;
+#X connect 1 18 9 0;
+#X connect 1 19 10 0;
+#X connect 1 20 12 0;
+#X connect 2 0 13 0;
+#X connect 3 0 13 0;
+#X connect 4 0 13 0;
+#X connect 5 0 13 0;
+#X connect 6 0 13 0;
+#X connect 7 0 13 0;
+#X connect 8 0 13 0;
+#X connect 9 0 13 0;
+#X connect 10 0 13 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X restore 731 341 pd Proteodic_Process;
+#X obj 743 148 metro 250;
+#X text 768 126 <- Start there \, Stop clicking twice;
+#X obj 6 -57 loadbang;
+#X obj 805 203 route 1285;
+#X msg 65 -58 \; S1_VARIANT_OF_CONCERN resize 1270 \; S1_VARIANT_OF_CONCERN
+0 0 0 0 0 6 19 16 11 14 7 1 14 11 7 5 13 3 9 9 13 9 17 14 4 4 3 1 4
+3 4 4 1 14 11 4 3 4 4 3 6 15 4 4 11 15 10 6 7 15 7 10 2 10 11 1 2 10
+17 1 11 20 10 19 20 5 20 14 10 19 12 13 19 14 1 11 13 12 11 9 10 11
+3 13 8 11 8 14 2 7 13 8 11 18 9 10 13 14 12 10 8 7 7 3 2 8 10 1 3 10
+9 1 11 9 7 9 5 3 6 16 8 14 17 19 14 9 11 13 13 14 17 3 9 11 13 5 12
+11 5 9 19 7 6 8 8 7 10 1 10 7 7 9 4 8 1 3 7 17 6 8 16 6 6 10 10 12
+5 13 19 17 8 18 12 6 7 17 20 16 6 1 8 3 7 17 7 1 13 18 5 17 16 2 14
+1 9 16 4 10 2 5 2 6 6 17 8 14 13 12 2 5 7 19 6 7 16 11 17 7 7 1 16
+5 2 3 12 5 17 3 15 11 16 19 1 14 1 4 17 9 7 18 14 3 12 1 11 7 4 13
+3 15 14 6 2 2 11 8 2 3 2 18 10 13 2 2 18 10 11 12 12 6 7 19 6 12 11
+3 12 11 18 1 6 10 11 18 9 10 12 7 13 2 13 7 14 9 11 18 2 11 10 9 8
+11 7 3 3 10 2 1 17 8 3 3 11 12 14 7 11 6 8 11 2 12 2 8 12 8 7 7 9 12
+11 14 1 11 2 3 2 6 3 3 11 3 9 12 10 14 1 10 2 3 8 17 12 8 2 10 11 14
+12 8 13 19 11 7 8 12 6 7 1 10 1 8 17 18 19 2 15 12 15 2 17 5 10 12
+11 2 2 1 2 1 17 6 20 1 3 6 10 6 1 2 11 11 2 3 6 19 12 2 10 15 13 9
+6 11 11 5 5 11 7 6 11 1 8 17 14 12 2 4 10 11 9 18 2 2 10 9 1 11 4 9
+1 19 12 14 10 17 1 2 9 2 11 6 7 14 8 17 11 11 9 13 10 17 3 18 14 3
+5 14 3 5 9 5 11 10 12 3 17 8 17 1 1 17 9 14 10 5 5 6 14 19 10 12 14
+7 2 17 7 13 12 6 8 14 9 12 13 7 2 10 1 6 11 2 18 8 11 12 6 4 17 3 1
+19 12 11 11 11 8 3 4 13 6 3 9 1 4 10 19 15 6 4 9 7 3 6 14 6 15 3 7
+5 11 10 13 6 6 7 3 10 6 17 8 10 5 10 2 10 3 8 8 3 19 2 7 3 8 13 2 1
+11 3 15 6 19 2 10 10 3 12 3 2 7 3 18 2 18 18 16 3 8 6 12 6 12 19 3
+2 4 10 1 2 1 10 5 10 9 4 13 19 3 8 8 7 16 13 2 1 10 11 4 1 2 18 6 12
+17 7 8 3 1 6 3 19 7 18 20 6 5 6 11 12 9 2 16 10 2 7 5 7 13 6 4 8 7
+1 12 19 11 7 2 7 12 8 3 6 8 6 1 5 6 10 7 3 7 1 1 17 3 4 5 6 10 9 11
+10 13 11 6 12 5 9 18 7 2 9 6 6 9 9 10 9 18 1 17 12 12 17 5 11 17 14
+14 8 3 13 6 11 7 1 6 1 6 11 1 8 17 8 17 8 7 4 14 8 14 7 11 8 6 3 14
+14 5 1 4 7 6 2 5 2 16 11 11 13 17 3 11 7 7 7 18 19 5 12 19 1 7 1 19
+6 5 12 17 1 19 3 12 11 5 17 19 4 8 17 1 13 7 1 8 4 5 6 3 1 2 12 19
+10 13 6 3 10 9 18 13 17 5 14 11 8 3 14 18 17 11 18 19 11 19 8 19 8
+1 1 7 14 3 9 11 8 8 3 8 20 2 10 7 4 1 6 17 9 9 5 11 14 19 8 19 9 2
+10 14 1 6 12 1 5 2 10 12 18 7 13 9 1 18 10 7 17 3 9 2 19 7 8 6 17 4
+11 9 8 11 14 6 5 3 7 1 19 4 14 17 6 3 17 3 2 3 8 19 11 7 3 19 9 2 7
+4 8 3 10 18 14 18 8 20 2 19 7 3 2 17 18 6 2 8 17 7 13 1 17 5 4 11 8
+6 10 8 5 17 18 7 10 3 13 6 5 12 7 18 17 8 3 6 12 19 10 1 14 13 7 6
+17 3 14 11 6 4 14 6 13 3 11 5 9 11 2 4 9 7 2 9 6 10 6 1 8 13 8 19 14
+11 11 17 6 18 5 12 11 19 1 7 19 19 2 2 2 1 2 6 20 1 3 3 3 9 1 5 6 11
+19 3 18 16 11 2 11 11 6 12 17 18 6 10 8 10 1 10 5 11 9 7 11 5 13 11
+2 3 17 1 12 5 11 9 18 7 11 8 10 5 6 16 14 3 19 10 14 17 19 1 9 10 8
+14 17 7 17 13 18 11 8 14 17 8 1 12 14 1 13 11 9 15 11 17 5 12 3 7 19
+13 17 6 4 8 8 2 3 3 19 7 18 17 13 3 13 15 20 3 14 8 8 14 16 19 7 1
+11 17 5 9 8 4 17 12 17 13 4 7 14 10 7 7 8 6 2 8 8 7 10 11 11 3 12 6
+14 3 9 11 6 6 1 17 10 20 1 18 10 10 8 3 14 13 6 3 2 17 19 7 1 9 8 17
+5 11 7 5 8 9 17 18 14 6 1 8 6 1 3 10 2 16 17 20 6 7 8 3 17 17 5 11
+17 11 9 12 6 3 16 11 7 3 3 18 17 7 14 9 5 19 19 7 1 18 6 17 3 8 6 19
+2 5 5 11 12 6 18 6 6 11 8 7 4 12 3 3 7 11 5 11 11 7 11 17 7 17 15 0
+0 0 0 0 0 0 0 0 0 \;;
+#X msg 805 282 set S1_VARIANT_OF_CONCERN;
+#N canvas 0 22 404 608 inverted_protein 0;
+#X text 6 10 T Y H L K V G K L V P E S D D E D F K C C S G C S C C
+G K L C S C C S T M C C L M I T V M V I A I L G A I F G L W I Y W P
+W K I Y Q E Y K G L E Q L D I L S E N L N K A V E N L R D I E K Q I
+N V V S A N I G S I D G L D V D P S T H N K F Y K D L E E K F S D L
+E P Q L P D Y V T N N V I G I V V D C N G S V F T N H T T I I Q P E
+Y F N R Q T V F W H T G N S V F V G E R P F H A K G D H C I A P A T
+T F N K E Q A P V Y T V H L F V V G H P A S Q P F S M L H Y G K G C
+F D V R K S Q G L V C E S M K T A A L N A S A R I E A A R I L Q Q T
+V Y T Q L S Q L R G T I L R D I Q V E A E V K D L R A L I D N L V S
+S I A G F N S S L Q K V L T N L A Q A N Q N V V D Q L K G L A S A T
+S S L S D Q I K G I A S N F Q N A I L K Q N E Y L V N Q T V G I G N
+F R Y A M Q M A F P I Q L A A G A G F T W G S T I T G A L L A S T Y
+Q A I M E D T L L P P L V T L G N F K Q A C I L D R A A I D G L C D
+G Y Q K I F G A D A L T V K N F L L D E I F S R K S P K S P D P L I
+Q S F N F G G F D K I P P T K Y I Q K V A F V E Q T N K D Q E V A I
+G T L A R N L Q T C F S G Y Q L L L N S C E T S D G C I Y M T C D V
+S T K T M S V P L I E T T V S I T F N I P I A I S N N S Y A V S N E
+A G L S M T Y A I I S Q S A V S R A R R H S N T Q T Q Y S A C I G A
+G I P I D C E Y S N N V H E A G I L C G A R T Q F V N S G T S Y V R
+W T P T L Q D A H I A V P V E T C N V G Q Y L V A V Q N S T N T G P
+T I V S V G G F S C P T I D L I E L T Q P D R V A D T T D D I D R G
+F Q Q F P L F K K N S E T L V G T G T L G N F N F N V C K N K V L N
+T S K K P G C V T A P A H L L E F S L V V V R Y P Q Y G V G Y T P Q
+F G Y S Q L P F Y C N F G E V G N C P T S G A Q Y I E T S I D R E F
+P K L N S K R F L R Y L Y N Y N G G V K S D L N N S N W A I V C G T
+F D D P L K Y N Y D A I K G T Q G P A I Q R V E D G R I V F S D A Y
+V N T F C L D N L K T P S V G Y C K F T S F S A S N Y L V S Y D A V
+C N S I R K R N W A Y V S A F R T A N F V E G F P C L N T I N P F R
+V I S E T P Q V R F N S T Q Y I G K E V T F S K L T C K T E S L P D
+L A C D V A D T I T G N E N Y K L L F T R P Q L Y G V Y Y A A A G A
+T W G S S S D G P T L Y S R H L A L L T Q F R T I N I G I P L D V L
+P E L A S F G Q P L D R V L N I P T H K S Y I K F Y G D I N K F V F
+E R L N K F N G Q K G E L D M L F P Q S V Y E F T C N N A S S Y V R
+F E S E M W S K N N K H Y V G L F P D N C F Q F E C V K I V V N T A
+N N V I L L S Q T K S D L T T G F I W G R I I N S K E T S A F Y V G
+D N F P L V P N D F R K T G N T G S I A H F W T V N S F F P L F L D
+Q T S H L V S S R F V K D P Y Y V G R T F S N T Y A P P L Q T R T T
+L N V C Q S S V L P L L V L F V F M;
+#X restore 483 490 pd inverted_protein;
+#X obj 762 378 osc~ 440;
+#X obj 762 437 dac~;
+#X obj 762 407 *~ 0.05;
+#X msg 772 530 \; pd dsp 1;
+#X msg 876 530 \; pd dsp 0;
+#X text 787 567 ON;
+#X text 896 567 OFF;
+#X floatatom 678 418 5 0 0 0 - - -;
+#X text 780 640 GhostLab_2021;
+#X connect 1 0 9 0;
+#X connect 2 0 14 0;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 12 0;
+#X connect 6 0 3 0;
+#X connect 7 0 8 0;
+#X connect 8 0 16 0;
+#X connect 8 0 23 0;
+#X connect 9 0 4 0;
+#X connect 11 0 13 0;
+#X connect 12 0 4 3;
+#X connect 14 0 3 0;
+#X connect 16 0 18 0;
+#X connect 18 0 17 0;
+#X connect 18 0 17 1;
