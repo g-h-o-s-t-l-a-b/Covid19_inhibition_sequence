@@ -1,0 +1,22 @@
+EXPERIMENTAL PYTHAGOREAN TABLES / BASE 9
+
+alanine - ala - A - 270 Hz
+arginine - arg - R - 504 Hz
+asparagine - asn - N - 396 Hz
+aspartic acid - asp - D - 396 Hz
+cysteine - cys - C - 360 Hz 
+glutamine - gln - Q - 432 Hz
+glutamic acid - glu - E - 432 Hz
+glycine - gly - G - 225 Hz
+histidine - his - H - 456 Hz
+isoleucine - ile - I - 396 Hz
+leucine - leu - L - 396 Hz
+lysine - lys - K - 432 Hz
+methionine - met - M - 432 Hz
+phenylalanine - phe - F - 486 Hz
+proline - pro - P - 342 Hz
+serine - ser - S - 306 Hz
+threonine - thr - T - 360 Hz
+tryptophan - trp - W - 612 Hz
+tyrosine - tyr - Y - 540 Hz
+valine - val - V - 342 Hz

@@ -1,0 +1,193 @@
+#N canvas 185 242 1009 720 10;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array COVID19SPIKEINHIBITION 1273 float 0;
+#X coords 0 30 1272 -10 400 140 1;
+#X restore 450 -34 graph;
+#X msg 540 630 \; pd dsp 1;
+#X msg 644 630 \; pd dsp 0;
+#X text 555 667 ON;
+#X text 664 667 OFF;
+#X obj 745 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 805 215 loadbang;
+#X obj 731 272 tabread;
+#X obj 743 176 counter;
+#X obj 742 198 t f f;
+#X floatatom 735 231 5 0 0 0 - - -;
+#X floatatom 731 295 5 0 0 0 - - -;
+#X msg 805 255 set COVID19SPIKEINHIBITION;
+#N canvas 142 161 784 478 Proteodic_Process 0;
+#X obj 88 23 inlet;
+#X obj 58 54 route 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+20;
+#X obj 203 442 dac~;
+#X obj 203 412 *~ 0.05;
+#X obj 203 382 osc~;
+#X msg 458 92 0;
+#X msg 20 90 225;
+#X msg 52 90 270;
+#X msg 97 90 306;
+#X msg 142 90 360;
+#X msg 186 90 396;
+#X msg 220 91 432;
+#X msg 256 91 456;
+#X msg 301 91 486;
+#X msg 371 92 540;
+#X msg 334 91 504;
+#X msg 412 92 612;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 1 3 9 0;
+#X connect 1 4 9 0;
+#X connect 1 5 9 0;
+#X connect 1 6 9 0;
+#X connect 1 7 10 0;
+#X connect 1 8 10 0;
+#X connect 1 9 10 0;
+#X connect 1 10 10 0;
+#X connect 1 11 11 0;
+#X connect 1 12 11 0;
+#X connect 1 13 11 0;
+#X connect 1 14 11 0;
+#X connect 1 15 12 0;
+#X connect 1 16 13 0;
+#X connect 1 17 15 0;
+#X connect 1 18 14 0;
+#X connect 1 19 16 0;
+#X connect 1 20 5 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 4 0;
+#X connect 16 0 4 0;
+#X restore 731 314 pd Proteodic_Process;
+#X obj 743 148 metro 250;
+#X obj 805 176 route 1293;
+#X text 768 126 <- Start there \, Stop clicking twice;
+#X obj 6 -57 loadbang;
+#X msg 65 -58 \; COVID19SPIKEINHIBITION resize 1273 \; COVID19SPIKEINHIBITION
+0 0 0 0 0 0 0 0 0 0 6 19 16 8 13 5 1 13 8 5 4 14 3 11 11 14 11 17 13
+7 7 3 1 7 3 7 7 1 13 8 7 3 7 7 3 6 15 7 7 8 15 9 6 5 15 5 9 2 9 8 1
+2 9 17 1 8 20 9 19 20 4 20 13 9 19 12 14 19 13 1 8 14 12 8 11 9 8 3
+14 10 8 10 13 2 5 14 10 8 18 11 9 14 13 12 9 10 5 5 3 2 10 9 1 3 9
+11 1 8 11 5 11 4 3 6 16 10 13 17 19 13 11 8 14 14 13 17 3 11 8 14 4
+12 8 4 11 19 5 6 10 10 5 9 1 9 5 5 11 7 10 1 3 5 17 6 10 11 6 6 9 9
+12 4 14 19 17 10 18 12 6 5 17 20 16 6 1 10 3 5 17 5 1 14 18 4 17 16
+2 13 1 11 16 7 9 2 4 2 6 6 17 10 13 14 12 2 4 5 19 6 5 16 8 17 5 5
+1 16 4 2 3 12 4 17 3 15 8 16 19 1 13 1 7 17 11 5 18 13 3 12 1 8 5 7
+14 3 15 13 6 2 2 8 10 2 3 2 18 9 14 2 2 18 9 8 12 12 6 5 19 6 12 8
+3 12 8 18 1 6 9 8 18 11 9 12 5 14 2 14 5 13 11 8 18 3 8 9 11 10 8 5
+3 3 9 2 1 17 10 3 3 8 12 13 5 8 6 10 8 2 12 2 10 12 10 5 5 11 12 8
+13 1 8 2 3 2 6 3 3 8 3 11 12 9 13 1 9 2 3 10 17 12 10 2 9 8 13 12 10
+14 19 8 5 10 12 6 5 1 9 1 10 17 18 19 2 15 12 15 2 17 4 9 12 8 2 2
+1 2 1 17 6 20 1 3 6 9 6 1 2 8 8 2 3 6 19 12 2 9 15 14 11 6 8 8 4 4
+8 5 6 8 1 10 17 13 12 2 7 9 8 11 18 2 2 9 11 1 8 7 11 1 19 12 13 9
+17 1 2 11 2 8 6 5 13 10 17 8 8 11 14 9 17 3 18 13 3 4 13 3 4 11 4 8
+9 12 3 17 10 17 1 1 17 11 13 9 4 4 6 13 19 9 12 13 5 12 2 17 5 14 12
+6 10 13 11 12 14 5 2 9 1 6 8 2 18 10 8 12 6 7 17 3 1 19 12 8 8 8 10
+3 7 14 6 3 11 1 7 9 19 15 6 7 11 5 3 6 13 6 15 3 5 4 8 9 14 6 6 5 3
+9 6 17 10 6 4 9 2 9 3 10 10 3 19 2 5 3 10 14 2 1 8 3 15 6 19 2 9 9
+3 12 3 2 5 3 18 2 18 18 4 3 10 6 12 6 12 19 3 2 7 9 1 2 1 9 4 9 11
+7 14 19 3 10 10 5 16 14 2 1 9 8 7 1 2 18 6 12 17 5 10 3 1 6 3 19 5
+18 20 6 4 6 8 12 11 2 16 9 2 5 4 5 14 6 7 10 5 11 12 19 8 5 2 5 12
+10 3 6 10 6 1 4 6 9 5 3 5 1 1 17 3 7 4 6 9 11 8 9 14 8 6 12 4 11 18
+5 2 11 6 6 11 2 9 11 18 1 17 12 12 17 4 8 17 13 13 10 3 14 6 8 5 1
+6 1 6 8 1 10 17 10 17 10 5 7 13 10 13 5 8 10 6 3 13 13 4 1 7 5 6 2
+4 2 16 8 8 14 17 3 8 5 5 5 18 19 4 12 19 1 5 1 10 6 4 12 17 1 19 3
+12 8 4 17 19 7 10 17 1 14 5 1 10 7 4 6 3 1 2 12 19 9 14 6 3 9 11 18
+14 17 4 13 8 10 3 13 18 17 8 18 19 8 19 10 19 10 1 1 5 13 3 11 8 10
+10 3 10 20 2 9 5 7 1 6 17 11 11 4 8 13 19 10 19 11 2 9 13 1 6 12 1
+4 2 9 12 18 5 14 11 1 18 9 5 17 3 11 2 19 5 10 6 17 7 8 11 10 8 13
+6 4 3 5 1 19 7 13 17 6 3 17 3 2 3 10 19 8 5 3 19 11 2 5 7 10 3 9 18
+13 18 10 20 2 19 5 3 2 17 18 6 2 10 17 5 14 1 17 4 7 8 10 6 9 10 4
+17 18 5 9 3 14 6 4 12 5 18 17 10 3 6 12 19 9 1 13 14 5 6 17 3 13 8
+6 7 13 6 14 3 8 4 11 8 2 7 11 5 2 11 6 9 6 1 10 14 10 19 13 8 8 17
+6 18 4 12 8 19 1 5 19 19 2 2 2 1 2 6 20 1 3 3 3 11 1 4 6 8 19 3 18
+16 8 2 8 8 6 12 17 18 6 9 10 9 1 9 4 8 11 5 8 4 14 8 2 3 17 1 12 4
+8 11 18 5 8 10 9 4 6 16 13 3 19 9 13 17 19 1 11 9 10 13 17 5 17 14
+18 8 10 13 17 10 1 12 13 1 14 8 11 15 8 17 4 12 3 5 19 14 17 6 7 10
+10 2 3 3 19 5 18 17 14 3 14 15 20 3 13 10 10 13 16 19 19 5 1 8 17 4
+11 10 7 17 12 17 14 7 5 13 9 5 5 10 6 2 10 10 5 9 8 8 3 12 6 13 3 11
+8 6 6 1 17 9 20 1 18 9 9 10 3 13 14 6 3 2 17 19 5 1 11 10 17 4 8 5
+4 10 11 17 18 13 6 1 10 6 1 3 5 16 9 2 16 17 20 6 5 10 3 17 17 4 8
+17 8 11 12 6 3 16 8 5 3 3 18 17 5 13 11 4 19 19 5 1 18 6 17 3 10 6
+19 2 4 4 8 12 6 18 6 6 8 10 5 7 12 3 3 5 8 4 8 8 5 8 17 5 17 15 0 0
+0 0 0 0 0 0 0 0 \;;
+#N canvas 0 22 472 654 Inverted_Spike 0;
+#X text 46 43 T Y H L K V G K L V P E S D D E D F K C C S G C S C C
+G K L C S C C S T M C C L M I T V M V I A I L G A I F G L W I Y W P
+W K I Y Q E Y K G L E Q L D I L S E N L N K A V E N L R D I E K Q I
+N V V S A N I G S I D G L D V D P S T H N K F Y K D L E E K F S D L
+E P Q L P D Y V T N N V I G I V V D C N G S V F T N D T T I I Q P E
+Y F N R Q T V F W H T G N S V F V G E R P F H A K G D H C I A P A T
+T F N K E Q A P V Y T V H L F V V G H P A S Q P F S M L H Y G K G C
+F D V R K S Q G L V C E S M K T A A L N A S A R I E A A R I L Q Q T
+V Y T Q L S Q L R G T I L R D I Q V E A E V K D L R S L I D N L V S
+S I A G F N S S L Q K V L T N L A Q A N Q N V V D Q L K G L A S A T
+S S L S D Q I K G I A S N F Q N A I L K Q N E Y L V N Q T V G I G N
+F R Y A M Q M A F P I Q L A A G A G F T W G S T I T G A L L A S T Y
+Q A I M E D T L L P P L V T L G N F K Q A C I L D R A A I D G L C D
+G Y Q K I F G A D A L T V K N F L L D E I F S R K S P K S P D P L I
+Q S F N F G G F D K I P P T K Y I Q K V Q A F V E Q T N K D Q E V A
+I G T L A R N L Q T C F S G Y Q L L L N S C E T S D G C I Y M T C D
+V S T K T M S V P L I E T T V S I T F N T P I A I S N N S Y A V S N
+E A G L S M T Y A I I S Q S A V S R A R R P S N T Q T Q Y S A C I G
+A G I P I D C E Y S N N V H E A G I L C G A R T Q F V N S G T S Y V
+R W T P T L Q D A H I A V P V E T C N V D Q Y L V A V Q N S T N T G
+P T I V S V G G F S C P T I D L I E L T Q P D R V A D T T D A I D R
+G F Q Q F P L F K K N S E T L V G T G T L G N F N F N V C K N K V L
+N T S K K P G C V T A P A H L L E F S L V V V R Y P Q Y G V G N T P
+Q F G Y S Q L P F Y C N F G E V G N C P T S G A Q Y I E T S I D R E
+F P K L N S K R F L R Y L Y N Y N G G V K S D L N N S N W A I V C G
+T F D D P L K Y N Y D A I K G T Q G P A I Q R V E D G R I V F S D A
+Y V N T F C L D N L K T P S V G Y C K F T S F S A S N Y L V S Y D A
+V C N S I R K R N W A Y V S A F R T A N F V E G F P C L N T I N P F
+R V I S E T P Q V R F N S T Q Y I G K E V T F S K L T C K T E S L P
+D L A C D V A D T I T G N E N Y K L L F T R P Q L Y G V Y Y A A A G
+A T W G S S S D G P T L Y S R H L A L L T Q F R T I N I G I P L D V
+L P E L A S F G Q P L D R V L N I P T H K S Y I K F Y G D I N K F V
+F E R L N K F N G Q K G E L D M L F P Q S V Y E F T C N N A S S Y V
+R F E S E M W S K N N K H Y Y V G L F P D N C F Q F E C V K I V V N
+T A N N V I L L S Q T K S D L T T G F I W G R I I N S K E T S A F Y
+V G D N F P L V P N D F R K T G N T G S V H I A H F W T V N S F F P
+L F L D Q T S H L V S S R F V K D P Y Y V G R T F S N T Y A P P L Q
+T R T T L N V C Q S S V L P L L V L F V F M;
+#X restore 731 342 pd Inverted_Spike;
+#X text 489 197 EXPERIMENTAL PYTHAGOREAN TABLES;
+#N canvas 0 22 475 320 PYTH_base9 0;
+#X text 48 62 alanine - ala - A - 270 Hz.........arginine - arg - R
+- 504 Hz.........asparagine - asn - N - 396 Hz.........aspartic acid
+- asp - D - 396 Hz.........cysteine - cys - C - 360 Hz.........glutamine
+- gln - Q - 432 Hz.........glutamic acid - glu - E - 432 Hz.........glycine
+- gly - G - 225 Hz.........histidine - his - H - 456 Hz.........isoleucine
+- ile - I - 396 Hz.........leucine - leu - L - 396 Hz.........lysine
+- lys - K - 432 Hz.........methionine - met - M - 432 Hz.........phenylalanine
+- phe - F - 486 Hz.........proline - pro - P - 342 Hz.........serine
+- ser - S - 306 Hz.........threonine - thr - T - 360 Hz.........tryptophan
+- trp - W - 612 Hz.........tyrosine - tyr - Y - 540 Hz.........valine
+- val - V - 342 Hz;
+#X restore 523 242 pd PYTH_base9;
+#X text 780 640 GhostLab_2021;
+#X connect 5 0 14 0;
+#X connect 6 0 12 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 1 15 0;
+#X connect 10 0 7 0;
+#X connect 11 0 13 0;
+#X connect 12 0 7 0;
+#X connect 14 0 8 0;
+#X connect 15 0 8 3;
+#X connect 17 0 18 0;
